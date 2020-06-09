@@ -26,18 +26,20 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:background="#E7E4E3"
-        app:layout_constraintBotton_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/onButtonClicked2"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:background="#E7E4E3"
+        style="@style/color_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/onButtonClicked" />
+        app:layout_constraintTop_toBottomOf="@+id/colorButton" />
+    
+    <Button
+        android:id="@+id/onButtonClicked3"
+        style="@style/color_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onButtonClicked2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,6 @@
 package com.example.colorfuldays;
 
-import android.graphics.Color;
+import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.view.Menu;
@@ -70,14 +70,9 @@ public class MainActivity extends AppCompatActivity
     public void onClickListener(View v)
     {
         Button colorButton = (Button) findViewById(R.id.colorButton);
-        switch (v.getId())
-        {
-            case R.id.onButtonClicked2:
-                colorButton.setText("getData(time1)");
-                colorButton.setBackgroundColor(Color.parseColor("#FB6C8D"));
-                break;
-
-        }
+        colorButton.setText(getDate());
+        Intent intent = new Intent(getApplicationContext(), DiaryActivity.class);
+        startActivity(intent);
     }
 
     static String getDate()
@@ -89,6 +84,5 @@ public class MainActivity extends AppCompatActivity
 
         return time1;
     }
-
 
 }
