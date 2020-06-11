@@ -85,6 +85,4 @@ public class MainActivity extends AppCompatActivity
 
         return time1;
     }
-    //
-
 }
