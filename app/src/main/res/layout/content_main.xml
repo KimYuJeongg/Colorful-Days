@@ -19,27 +19,146 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/mobile_navigation" />
 
-    <Button
-        android:id="@+id/colorButton"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:background="#E7E4E3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/onButtonClicked2"
-        style="@style/color_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/colorButton" />
-    
-    <Button
-        android:id="@+id/onButtonClicked3"
-        style="@style/color_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/onButtonClicked2" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/colorButton1"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton2"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton3"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton4"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton5"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton6"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton7"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton8"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/colorButton9"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton10"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton11"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton12"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton13"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton14"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton15"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton16"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/colorButton17"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton18"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton19"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton20"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton21"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton22"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton23"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+
+            <Button
+                android:id="@+id/colorButton24"
+                android:background="@drawable/button_shape"
+                style="@style/color_button" />
+        </TableRow>
+
+    </TableLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

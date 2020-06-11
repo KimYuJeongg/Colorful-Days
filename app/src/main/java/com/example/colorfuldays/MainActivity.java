@@ -69,8 +69,9 @@ public class MainActivity extends AppCompatActivity
 
     public void onClickListener(View v)
     {
-        Button colorButton = (Button) findViewById(R.id.colorButton);
-        colorButton.setText(getDate());
+        Button colorButton = (Button) findViewById(R.id.colorButton1);
+        String date = getDate();
+//        colorButton.setText(getDate());
         Intent intent = new Intent(getApplicationContext(), DiaryActivity.class);
         startActivity(intent);
     }
