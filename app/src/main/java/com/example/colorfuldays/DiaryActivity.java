@@ -1,5 +1,6 @@
 package com.example.colorfuldays;
 
+import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -7,7 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.Calendar;
+import java.util.Date;
 
 public class DiaryActivity extends AppCompatActivity
 {
@@ -20,8 +21,10 @@ public class DiaryActivity extends AppCompatActivity
     public void date(View v)
     {
         TextView textView = (TextView) findViewById(R.id.date);
-        textView.setText(Calendar.getInstance().get(Calendar.YEAR) +
-                "." + (Calendar.getInstance().get(Calendar.MONTH) + 1) +
-                "." + Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
+        SimpleDateFormat date = new SimpleDateFormat("YYYY.MM.dd");
+        Date time = new Date();
+
+        String time1 = date.format(time);
+        textView.setText(time1);
     }
 }
