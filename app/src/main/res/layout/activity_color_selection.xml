@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ColorSelectionActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -17,10 +18,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/chooseColorList"
+            android:id="@+id/main_listview"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:scrollbars="horizontal" />
-
+            android:orientation="horizontal"
+            />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

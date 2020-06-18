@@ -10,14 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".DiaryActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".ColorSelectionActivity"
+            android:label="Colorful Days"
+            android:theme="@style/color_selection_transparent">
         </activity>
         <activity
-            android:name=".ChooseEmotionActivity"
-            android:label="Colorful Days"
-            android:theme="@style/choose_color_transparent">
+            android:name=".DiaryActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
             android:name=".MainActivity"

@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
             }
         });
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -67,22 +68,33 @@ public class MainActivity extends AppCompatActivity
         return NavigationUI.navigateUp(navController, mAppBarConfiguration) || super.onSupportNavigateUp();
     }
 
-    public void onClickListener(View v)
+    public void onColorButtonClick(View v)
+    {
+        Intent intent = new Intent(getApplicationContext(), ChooseEmotionActivity.class);
+        startActivityForResult(intent, 0);
+    }
+
+    public void displayDate(View v)
     {
         Button colorButton = (Button) findViewById(R.id.colorButton1);
-        String date = getDate();
-//        colorButton.setText(getDate());
-        Intent intent = new Intent(getApplicationContext(), DiaryActivity.class);
-        startActivity(intent);
+        colorButton.setText(getDate());
     }
 
     static String getDate()
     {
-        SimpleDateFormat date = new SimpleDateFormat("MM/dd");
         Date time = new Date();
-
-        String time1 = date.format(time);
+        SimpleDateFormat dateMain = new SimpleDateFormat("MM/dd");
+        String time1 = dateMain.format(time);
 
         return time1;
+    }
+
+    public static String getDiaryDate()
+    {
+        Date time = new Date();
+        SimpleDateFormat dateDiary = new SimpleDateFormat("yyyy.MM.dd");
+        String time2 = dateDiary.format(time);
+
+        return time2;
     }
 }

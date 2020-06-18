@@ -1,30 +1,35 @@
 package com.example.colorfuldays;
 
-import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DiaryActivity extends AppCompatActivity
 {
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState)
+    protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.diary);
-    }
-    public void date(View v)
-    {
+        setContentView(R.layout.activity_diary);
+
         TextView textView = (TextView) findViewById(R.id.date);
-        SimpleDateFormat date = new SimpleDateFormat("YYYY.MM.dd");
+        textView.setText("2020.8.29");
+    }
+
+    private String date(View v)
+    {
+
+        SimpleDateFormat date = new SimpleDateFormat("yyyy.MM.dd");
         Date time = new Date();
 
         String time1 = date.format(time);
-        textView.setText(time1);
+
+        return time1;
     }
 }
