@@ -1,10 +1,10 @@
 package com.example.colorfuldays;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,7 +13,7 @@ import com.example.colorfuldays.veiwlist.ViewListVacancy;
 
 import java.util.ArrayList;
 
-public class ColorSelectionActivity extends AppCompatActivity
+public class ColorSelectionActivity extends Activity
 {
     private RecyclerView listview;
     private Adapter adapter;

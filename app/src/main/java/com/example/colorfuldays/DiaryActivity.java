@@ -22,7 +22,7 @@ public class DiaryActivity extends AppCompatActivity
         textView.setText("2020.8.29");
     }
 
-    private String date(View v)
+    static String getDate(View v)
     {
 
         SimpleDateFormat date = new SimpleDateFormat("yyyy.MM.dd");

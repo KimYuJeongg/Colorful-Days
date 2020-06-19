@@ -23,7 +23,6 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity
 {
-
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
@@ -51,6 +50,7 @@ public class MainActivity extends AppCompatActivity
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
     }
 
     @Override
@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity
 
     public void onColorButtonClick(View v)
     {
-        Intent intent = new Intent(getApplicationContext(), ChooseEmotionActivity.class);
-        startActivityForResult(intent, 0);
+        Intent intent = new Intent(getApplicationContext(), ColorSelectionActivity.class);
+        startActivity(intent);
     }
 
     public void displayDate(View v)
@@ -87,14 +87,5 @@ public class MainActivity extends AppCompatActivity
         String time1 = dateMain.format(time);
 
         return time1;
-    }
-
-    public static String getDiaryDate()
-    {
-        Date time = new Date();
-        SimpleDateFormat dateDiary = new SimpleDateFormat("yyyy.MM.dd");
-        String time2 = dateDiary.format(time);
-
-        return time2;
     }
 }
