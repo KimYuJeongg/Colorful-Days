@@ -11,6 +11,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@android:color/transparent"
+        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,7 +22,6 @@
             android:id="@+id/main_listview"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_gravity="center"
             android:orientation="horizontal" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

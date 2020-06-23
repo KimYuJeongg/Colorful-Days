@@ -10,15 +10,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.colorfuldays.R;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
 {
-    private ArrayList<String> itemList;
+    private HashMap<String, String> itemList;
     private Context context;
     private View.OnClickListener onClickItem;
 
-    public Adapter(Context context, ArrayList<String> itemList, View.OnClickListener onClickItem)
+    public Adapter(Context context, HashMap<String, String> itemList, View.OnClickListener onClickItem)
     {
         this.context = context;
         this.itemList = itemList;

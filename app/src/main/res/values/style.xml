@@ -10,10 +10,9 @@
     </style>
 
     <style name="color_selection">
-        <item name="android:layout_width">100dp</item>
-        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">150dp</item>
         <item name="android:background">#0af1c7</item>
-        <item name="android:gravity">center</item>
         <item name="android:textColor">#696b6b</item>
         <item name="android:textSize">30sp</item>
     </style>
