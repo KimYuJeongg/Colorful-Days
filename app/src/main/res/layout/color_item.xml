@@ -7,6 +7,7 @@
     <TextView
         android:id="@+id/item_textview"
         style="@style/color_selection"
+        android:gravity="center"
         android:background="@drawable/item_button_shape"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
