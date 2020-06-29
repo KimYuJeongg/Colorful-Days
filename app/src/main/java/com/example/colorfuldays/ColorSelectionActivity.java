@@ -1,14 +1,16 @@
 package com.example.colorfuldays;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.DatePicker;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.colorfuldays.veiwlist.Adapter;
+import com.example.colorfuldays.veiwlist.VerticalSpaceItemDecoration;
 
 import java.util.ArrayList;
 
@@ -16,6 +18,7 @@ public class ColorSelectionActivity extends Activity
 {
     private RecyclerView listview;
     private Adapter adapter;
+    DatePicker datePicker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -28,44 +31,37 @@ public class ColorSelectionActivity extends Activity
 
     private void init()
     {
-
         listview = findViewById(R.id.main_listview);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         listview.setLayoutManager(layoutManager);
 
         ArrayList<String> itemList = new ArrayList<>();
         itemList.add("Anger");
-        itemList.add("Joy");
+        itemList.add("Confusion");
+        itemList.add("Exciting");
         itemList.add("Normal");
-        itemList.add("Happy");
+        itemList.add("Joy");
         itemList.add("Sad");
         itemList.add("Tired");
-        itemList.add("Melancholy");  //7
-
-//        HashMap<String, String> itmeList = new HashMap<>();
-//        itmeList.put("Anger", "#ff2929");
-//        itmeList.put("Joy", "#ff8229");
-//        itmeList.put("Normal", "#85e070");
-//        itmeList.put("Happy", "#ff7377");
-//        itmeList.put("Sad", "#847cf7");
-//        itmeList.put("Tired", "#847cf7");
-//        itmeList.put("melancholy", "#7cb1f7");
+        itemList.add("Melancholy");
 
         adapter = new Adapter(this, itemList, onClickItem);
         listview.setAdapter(adapter);
 
-//        ViewListVacancy decoration = new ViewListVacancy();
-//        listview.addItemDecoration(decoration);
+        listview.addItemDecoration(new VerticalSpaceItemDecoration(10));
     }
-
 
     private View.OnClickListener onClickItem = new View.OnClickListener()
     {
         @Override
         public void onClick(View v)
         {
-            String str = (String) v.getTag();
-            Toast.makeText(ColorSelectionActivity.this, str, Toast.LENGTH_SHORT).show();
+//            String str = (String) v.getTag();
+//            Toast.makeText(ColorSelectionActivity.this, str, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), DiaryActivity.class);
+            startActivity(intent);
         }
     };
+
+
 }

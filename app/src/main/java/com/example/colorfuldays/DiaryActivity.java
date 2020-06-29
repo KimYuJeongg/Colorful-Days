@@ -24,7 +24,6 @@ public class DiaryActivity extends AppCompatActivity
 
     static String getDate(View v)
     {
-
         SimpleDateFormat date = new SimpleDateFormat("yyyy.MM.dd");
         Date time = new Date();
 

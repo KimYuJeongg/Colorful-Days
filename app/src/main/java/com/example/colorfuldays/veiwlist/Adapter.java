@@ -47,19 +47,21 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
         GradientDrawable bgShape = (GradientDrawable) holder.textview.getBackground();
 
         if(position == 0)
-            bgShape.setColor(Color.parseColor("#ff2929"));
+            bgShape.setColor(Color.parseColor("#ff4343"));  //Anger
         else if(position == 1)
-            bgShape.setColor(Color.parseColor("#ff8229"));   //Joy
+            bgShape.setColor(Color.parseColor("#ff8e43"));  //Confusion
         else if(position == 2)
-            bgShape.setColor(Color.parseColor("#85e070"));    //Normal
+            bgShape.setColor(Color.parseColor("#ffff4f"));  //Exciting
         else if(position == 3)
-            bgShape.setColor(Color.parseColor("#ff7377"));    //Happy
+            bgShape.setColor(Color.parseColor("#85e070"));  //Normal
         else if(position == 4)
-            bgShape.setColor(Color.parseColor("#80a9e0"));    //Sad
+            bgShape.setColor(Color.parseColor("#ffa8ab"));  //Joy
         else if(position == 5)
-            bgShape.setColor(Color.parseColor("#6662bf"));    //Tired
+            bgShape.setColor(Color.parseColor("#80a9e0"));  //Sad
         else if(position == 6)
-            bgShape.setColor(Color.parseColor("#bd72db"));    //melancholy
+            bgShape.setColor(Color.parseColor("#6662bf"));  //Tired
+        else if(position == 7)
+            bgShape.setColor(Color.parseColor("#bd72db"));  //Melancholy
     }
 
     @Override
