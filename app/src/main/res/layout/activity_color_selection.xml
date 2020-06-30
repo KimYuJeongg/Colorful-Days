@@ -48,6 +48,13 @@
                 android:layout_height="200dp"
                 android:gravity="center"
                 android:orientation="horizontal" />
+
+<!--            <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                android:id="@+id/floatingActionButton"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:clickable="true"-->
+<!--                android:src="@android:drawable/ic_menu_edit" />-->
         </LinearLayout>
     </LinearLayout>
 

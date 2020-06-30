@@ -48,7 +48,7 @@ public class ColorSelectionActivity extends Activity
         adapter = new Adapter(this, itemList, onClickItem);
         listview.setAdapter(adapter);
 
-        listview.addItemDecoration(new VerticalSpaceItemDecoration(10));
+        listview.addItemDecoration(new VerticalSpaceItemDecoration(70));
     }
 
     private View.OnClickListener onClickItem = new View.OnClickListener()
