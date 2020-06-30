@@ -7,32 +7,33 @@
     tools:context=".DiaryActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="-16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="154dp">
 
         <TextView
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
             android:text="TextView"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textColor="#737373"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="left" />
 
         <EditText
             android:id="@+id/edit_Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_gravity="left"
             android:hint="제목을 입력하세요"
-            android:textColor="#616161"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/date" />
+            android:textColor="#737373"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/edit_Content"
@@ -41,7 +42,9 @@
             android:ems="10"
             android:gravity="start|top"
             android:hint="일기를 입력하세요"
+            android:textColor="#737373"
             android:inputType="textMultiLine" />
+
     </LinearLayout>
 
 
