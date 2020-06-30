@@ -33,42 +33,42 @@
             <Button
                 android:id="@+id/colorButton1"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton2"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton3"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton4"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton5"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton6"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton7"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton8"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
         </TableRow>
 
         <TableRow
@@ -78,42 +78,42 @@
             <Button
                 android:id="@+id/colorButton9"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton10"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton11"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton12"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton13"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton14"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton15"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton16"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
         </TableRow>
 
         <TableRow
@@ -123,42 +123,42 @@
             <Button
                 android:id="@+id/colorButton17"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton18"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton19"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton20"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton21"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton22"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton23"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton24"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
         </TableRow>
 
         <TableRow
@@ -168,42 +168,42 @@
             <Button
                 android:id="@+id/colorButton25"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton26"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton27"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton28"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton29"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton30"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton31"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton32"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
         </TableRow>
 
         <TableRow
@@ -213,42 +213,42 @@
             <Button
                 android:id="@+id/colorButton33"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton34"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton35"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton36"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton37"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton38"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton39"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton40"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
         </TableRow>
 
         <TableRow
@@ -258,42 +258,42 @@
             <Button
                 android:id="@+id/colorButton41"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton42"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton43"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton44"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton45"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton46"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton47"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton48"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
         </TableRow>
 
         <TableRow
@@ -303,42 +303,42 @@
             <Button
                 android:id="@+id/colorButton49"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton50"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton51"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton52"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton53"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton54"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton55"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton56"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
         </TableRow>
 
         <TableRow
@@ -348,42 +348,42 @@
             <Button
                 android:id="@+id/colorButton57"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton58"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton59"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton60"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton61"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton62"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton63"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton64"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
         </TableRow>
 
         <TableRow
@@ -393,42 +393,42 @@
             <Button
                 android:id="@+id/colorButton65"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton66"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton67"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton68"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton69"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton70"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton71"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton72"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
         </TableRow>
 
         <TableRow
@@ -438,42 +438,42 @@
             <Button
                 android:id="@+id/colorButton73"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton74"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton75"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton76"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton77"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton78"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton79"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton80"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
         </TableRow>
 
         <TableRow
@@ -483,42 +483,42 @@
             <Button
                 android:id="@+id/colorButton81"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton82"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton83"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton84"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton85"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton86"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton87"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
 
             <Button
                 android:id="@+id/colorButton88"
                 style="@style/color_button"
-                android:background="@drawable/button_shape" />
+                android:background="@drawable/color_button_shape" />
         </TableRow>
 
 
