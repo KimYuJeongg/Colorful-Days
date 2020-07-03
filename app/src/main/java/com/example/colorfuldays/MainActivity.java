@@ -1,12 +1,10 @@
 package com.example.colorfuldays;
 
 import android.content.Intent;
-import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,8 +17,6 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
-
-import java.util.Date;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -80,20 +76,5 @@ public class MainActivity extends AppCompatActivity
     {
         Intent intent = new Intent(getApplicationContext(), ColorSelectionActivity.class);
         startActivity(intent);
-    }
-
-    public void displayDate(View v)
-    {
-        Button colorButton = (Button) findViewById(R.id.colorButton1);
-        colorButton.setText(getDate());
-    }
-
-    static String getDate()
-    {
-        Date time = new Date();
-        SimpleDateFormat dateMain = new SimpleDateFormat("MM/dd");
-        String time1 = dateMain.format(time);
-
-        return time1;
     }
 }
