@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.colorfuldays.R;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
 {
@@ -44,24 +46,20 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
         holder.textview.setTag(item);
         holder.textview.setOnClickListener(onClickItem);
 
+        Map<String, String> colorMap = new HashMap<String, String>();
+        colorMap.put("Anger", "#ff4343");
+        colorMap.put("Confusion", "#ff8e43");
+        colorMap.put("Exciting", "#ffff4f");
+        colorMap.put("Normal", "#85e070");
+        colorMap.put("Joy", "#ffa8ab");
+        colorMap.put("Sad", "#80a9e0");
+        colorMap.put("Tired", "#6662bf");
+        colorMap.put("Melancholy", "#bd72db");
+
         GradientDrawable bgShape = (GradientDrawable) holder.textview.getBackground();
 
-        if(position == 0)
-            bgShape.setColor(Color.parseColor("#ff4343"));  //Anger
-        else if(position == 1)
-            bgShape.setColor(Color.parseColor("#ff8e43"));  //Confusion
-        else if(position == 2)
-            bgShape.setColor(Color.parseColor("#ffff4f"));  //Exciting
-        else if(position == 3)
-            bgShape.setColor(Color.parseColor("#85e070"));  //Normal
-        else if(position == 4)
-            bgShape.setColor(Color.parseColor("#ffa8ab"));  //Joy
-        else if(position == 5)
-            bgShape.setColor(Color.parseColor("#80a9e0"));  //Sad
-        else if(position == 6)
-            bgShape.setColor(Color.parseColor("#6662bf"));  //Tired
-        else if(position == 7)
-            bgShape.setColor(Color.parseColor("#bd72db"));  //Melancholy
+        if(colorMap.containsKey(itemList.get(position)))
+            bgShape.setColor(Color.parseColor(colorMap.get(itemList.get(position))));
     }
 
     @Override
