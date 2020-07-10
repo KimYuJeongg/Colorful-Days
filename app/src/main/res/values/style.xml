@@ -12,8 +12,6 @@
     <style name="color_selection">
         <item name="android:layout_width">150dp</item>
         <item name="android:layout_height">150dp</item>
-        <item name="android:textColor">@color/design_default_color_on_primary</item>
-        <item name="android:textSize">20dp</item>
     </style>
     
     <style name="color_selection_transparent" parent="Theme.MaterialComponents.Light.NoActionBar">
