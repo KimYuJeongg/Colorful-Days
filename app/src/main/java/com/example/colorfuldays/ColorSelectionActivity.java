@@ -1,10 +1,8 @@
 package com.example.colorfuldays;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.DatePicker;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,7 +18,6 @@ public class ColorSelectionActivity extends Activity
 {
     private RecyclerView listview;
     private Adapter adapter;
-    DatePicker datePicker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -29,11 +26,14 @@ public class ColorSelectionActivity extends Activity
         setContentView(R.layout.activity_color_selection);
 
         FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        fab.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View view)
+            {
+                Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+//            Intent intent = new Intent(getApplicationContext(), DiaryActivity.class);
+//            startActivity(intent);
             }
         });
 
@@ -56,23 +56,9 @@ public class ColorSelectionActivity extends Activity
         itemList.add("Tired");
         itemList.add("Melancholy");
 
-        adapter = new Adapter(this, itemList, onClickItem);
+        adapter = new Adapter(this, itemList, ColorSelectionActivity.this);
         listview.setAdapter(adapter);
 
         listview.addItemDecoration(new VerticalSpaceItemDecoration(70));
     }
-
-    private View.OnClickListener onClickItem = new View.OnClickListener()
-    {
-        @Override
-        public void onClick(View v)
-        {
-//            String str = (String) v.getTag();
-//            Toast.makeText(ColorSelectionActivity.this, str, Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(getApplicationContext(), DiaryActivity.class);
-            startActivity(intent);
-        }
-    };
-
-
 }

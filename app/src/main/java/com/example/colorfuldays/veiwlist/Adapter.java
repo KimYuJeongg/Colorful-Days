@@ -14,6 +14,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.colorfuldays.ColorSelectionActivity;
+import com.example.colorfuldays.DiaryActivity;
 import com.example.colorfuldays.R;
 
 import java.util.ArrayList;
@@ -24,15 +25,12 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
 {
     private ArrayList<String> itemList;
     private Context context;
-    private View.OnClickListener onClickItem;
     private Activity colorSelectionActivity;
 
-    public Adapter(Context context, ArrayList<String> itemList, View.OnClickListener onClickItem,
-                   ColorSelectionActivity colorSelectionActivity)
+    public Adapter(Context context, ArrayList<String> itemList, ColorSelectionActivity colorSelectionActivity)
     {
         this.context = context;
         this.itemList = itemList;
-        this.onClickItem = onClickItem;
         this.colorSelectionActivity = colorSelectionActivity;
     }
 
@@ -61,18 +59,36 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position)
+    public void onBindViewHolder(ViewHolder holder, final int position)
     {
         String item = itemList.get(position);
 
         holder.textview.setText(item);
         holder.textview.setTag(item);
-        holder.button.setOnClickListener(onClickItem);
 
         GradientDrawable bgShape = (GradientDrawable) holder.button.getBackground();
 
         if (ColorMap().containsKey(itemList.get(position)))
             bgShape.setColor(Color.parseColor(ColorMap().get(itemList.get(position))));
+
+        holder.button.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(colorSelectionActivity.getApplicationContext(), DiaryActivity.class);
+
+                if (position != RecyclerView.NO_POSITION)
+                {
+                    intent.putExtra("name", ColorMap().get(itemList.get((position))));
+                    colorSelectionActivity.setResult(Activity.RESULT_OK, intent);
+
+                    colorSelectionActivity.startActivity(intent);
+                    notifyItemChanged(position);
+                    colorSelectionActivity.finish();
+                }
+            }
+        });
     }
 
     @Override
@@ -81,7 +97,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
         return itemList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder
+    public class ViewHolder extends RecyclerView.ViewHolder //implements View.OnClickListener
     {
         public TextView textview;
         public Button button;
@@ -89,23 +105,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
         public ViewHolder(View itemView)
         {
             super(itemView);
-
-            itemView.setOnClickListener(new View.OnClickListener()
-            {
-                @Override
-                public void onClick(View v)
-                {
-                    int pos = getAdapterPosition();
-                    if (pos != RecyclerView.NO_POSITION)
-                    {
-                        Intent intent = new Intent();
-                        intent.putExtra("name", ColorMap().get(itemList.get((pos))));
-                        colorSelectionActivity.setResult(Activity.RESULT_OK, intent);
-                        notifyItemChanged(pos);
-                        colorSelectionActivity.finish();
-                    }
-                }
-            });
 
             textview = itemView.findViewById(R.id.item_text);
             button = itemView.findViewById(R.id.item_button);
