@@ -14,7 +14,6 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.colorfuldays.ColorSelectionActivity;
-import com.example.colorfuldays.DiaryActivity;
 import com.example.colorfuldays.R;
 
 import java.util.ArrayList;
@@ -38,14 +37,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
     {
         Map<String, String> colorMap = new HashMap<>();
 
-        colorMap.put("Anger", "#ff4343");
-        colorMap.put("Confusion", "#ff8e43");
-        colorMap.put("Exciting", "#ffff4f");
-        colorMap.put("Normal", "#85e070");
-        colorMap.put("Joy", "#ffa8ab");
-        colorMap.put("Sad", "#80a9e0");
-        colorMap.put("Tired", "#6662bf");
-        colorMap.put("Melancholy", "#bd72db");
+        colorMap.put("Anger", "#ff6969");
+        colorMap.put("Confusion", "#ffc085");
+        colorMap.put("Exciting", "#fff785");
+        colorMap.put("Normal", "#b9faa0");
+        colorMap.put("Joy", "#ffbcb8");
+        colorMap.put("Sad", "#9eb1ff");
+        colorMap.put("Tired", "#9578ff");
+        colorMap.put("Melancholy", "#c587ff");
 
         return colorMap;
     }
@@ -76,16 +75,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
             @Override
             public void onClick(View v)
             {
-                Intent intent = new Intent(colorSelectionActivity.getApplicationContext(), DiaryActivity.class);
+                Intent intent = new Intent();
 
                 if (position != RecyclerView.NO_POSITION)
                 {
                     intent.putExtra("name", ColorMap().get(itemList.get((position))));
                     colorSelectionActivity.setResult(Activity.RESULT_OK, intent);
-
-                    colorSelectionActivity.startActivity(intent);
                     notifyItemChanged(position);
-                    colorSelectionActivity.finish();
+//                    colorSelectionActivity.finish(); / Double Click Listener
                 }
             }
         });
@@ -97,7 +94,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
         return itemList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder //implements View.OnClickListener
+    public class ViewHolder extends RecyclerView.ViewHolder
     {
         public TextView textview;
         public Button button;
