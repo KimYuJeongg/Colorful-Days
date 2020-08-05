@@ -103,15 +103,8 @@ public class MainActivity extends AppCompatActivity
             super.onBackPressed();
     }
 
-    public void onColorButtonClick(View v)
-    {
-        Intent intent = new Intent(getApplicationContext(), ColorSelectionActivity.class);
-
-        startActivityForResult(intent, GET_COLOR_REQUEST);
-    }
-
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent intent)
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable final Intent intent)
     {
         super.onActivityResult(requestCode, resultCode, intent);
 
@@ -127,7 +120,7 @@ public class MainActivity extends AppCompatActivity
                 Button button = new Button(this);
                 GridLayout.LayoutParams layoutParams=new GridLayout.LayoutParams();
 
-                layoutParams.setMargins(27,30,0,0);
+                layoutParams.setMargins(27,27,0,0);         //나중에 dp로 받게 변경
                 layoutParams.width=size;
                 layoutParams.height=size;
                 button.setLayoutParams(layoutParams);
@@ -139,6 +132,14 @@ public class MainActivity extends AppCompatActivity
                 gridLayout.addView(button);
 
                 Toast.makeText(getApplicationContext(), "Received : " + name, Toast.LENGTH_LONG).show();
+
+                button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v)
+                    {
+                        startActivity(intent);
+                    }
+                });
             }
         }
     }
