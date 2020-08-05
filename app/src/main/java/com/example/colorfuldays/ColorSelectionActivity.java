@@ -1,8 +1,10 @@
 package com.example.colorfuldays;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.DatePicker;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.colorfuldays.veiwlist.Adapter;
 import com.example.colorfuldays.veiwlist.VerticalSpaceItemDecoration;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -31,14 +32,18 @@ public class ColorSelectionActivity extends Activity
             @Override
             public void onClick(View view)
             {
-                Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-//            Intent intent = new Intent(getApplicationContext(), DiaryActivity.class);
-//            startActivity(intent);
+                DatePicker datePicker = (DatePicker) findViewById(R.id.dataPicker);
+                String date = String.format("%d.%d.%d", datePicker.getYear(), datePicker.getMonth() + 1, datePicker.getDayOfMonth());
+                Intent intent = new Intent(getApplicationContext(), DiaryActivity.class);
+                intent.putExtra("date", date);
+                startActivity(intent);
             }
         });
 
         init();
     }
+
+
 
     private void init()
     {
@@ -58,7 +63,6 @@ public class ColorSelectionActivity extends Activity
 
         adapter = new Adapter(this, itemList, ColorSelectionActivity.this);
         listview.setAdapter(adapter);
-
         listview.addItemDecoration(new VerticalSpaceItemDecoration(70));
     }
 }
