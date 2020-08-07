@@ -24,4 +24,8 @@
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:windowFullscreen">true</item>
     </style>
+    
+    <style name="datepicker" parent="android:Widget.Material.Light.DatePicker">
+        <item name="android:textColorPrimary">@android:color/white</item>
+    </style>
 </resources>
