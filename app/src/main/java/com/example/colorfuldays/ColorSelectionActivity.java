@@ -17,6 +17,8 @@ import java.util.ArrayList;
 
 public class ColorSelectionActivity extends Activity
 {
+    private RecyclerView listview;
+    private Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -35,16 +37,17 @@ public class ColorSelectionActivity extends Activity
                 Intent intent = new Intent(getApplicationContext(), DiaryActivity.class);
                 intent.putExtra("date", date);
                 startActivity(intent);
-
             }
         });
 
-        initRecycleViewItem();
+        init();
     }
 
-    private void initRecycleViewItem()
+
+
+    private void init()
     {
-        RecyclerView listview = findViewById(R.id.main_listview);
+        listview = findViewById(R.id.main_listview);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         listview.setLayoutManager(layoutManager);
 
@@ -58,10 +61,8 @@ public class ColorSelectionActivity extends Activity
         itemList.add("Tired");
         itemList.add("Melancholy");
 
-        Adapter adapter = new Adapter(this, itemList, ColorSelectionActivity.this);
+        adapter = new Adapter(this, itemList, ColorSelectionActivity.this);
         listview.setAdapter(adapter);
-        listview.addItemDecoration(new VerticalSpaceItemDecoration(35));
+        listview.addItemDecoration(new VerticalSpaceItemDecoration(70));
     }
-
-    
 }

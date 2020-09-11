@@ -8,9 +8,8 @@ import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.TextView;
-import android.os.Handler;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,7 +25,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
     private ArrayList<String> itemList;
     private Context context;
     private Activity colorSelectionActivity;
-    int divide_line = 0;
 
     public Adapter(Context context, ArrayList<String> itemList, ColorSelectionActivity colorSelectionActivity)
     {
@@ -60,7 +58,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, final int position)
+    public void onBindViewHolder(ViewHolder holder, final int position)
     {
         String item = itemList.get(position);
 
@@ -77,33 +75,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
             @Override
             public void onClick(View v)
             {
-                divide_line++;
-                final Intent intent = new Intent();
+                Intent intent = new Intent();
 
                 if (position != RecyclerView.NO_POSITION)
                 {
-                    new Handler().postDelayed(new Runnable()
-                    {
-                        @Override
-                        public void run()
-                        {
-                            if(divide_line == 1)
-                            {
-                                String color = ColorMap().get(itemList.get((position)));
-                                intent.putExtra("name", color);
-                                colorSelectionActivity.setResult(Activity.RESULT_OK, intent);
-                                notifyItemChanged(position);
-                            }
-                            else if(divide_line == 2)
-                            {
-                                String color = ColorMap().get(itemList.get((position)));
-                                intent.putExtra("name", color);
-                                colorSelectionActivity.setResult(Activity.RESULT_OK, intent);
-                                notifyItemChanged(position);
-                                colorSelectionActivity.finish(); // Double Click Listener
-                            }
-                        }
-                    }, 500);
+                    intent.putExtra("name", ColorMap().get(itemList.get((position))));
+                    colorSelectionActivity.setResult(Activity.RESULT_OK, intent);
+                    notifyItemChanged(position);
+//                    colorSelectionActivity.finish(); / Double Click Listener
                 }
             }
         });
@@ -118,7 +97,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
     public class ViewHolder extends RecyclerView.ViewHolder
     {
         public TextView textview;
-        public ImageButton button;
+        public Button button;
 
         public ViewHolder(View itemView)
         {
