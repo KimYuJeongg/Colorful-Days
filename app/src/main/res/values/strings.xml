@@ -17,6 +17,6 @@
     <string name="title_menu">Menu</string>
     <string name="title_add">Add</string>
 
-    <string name="hint_diary_title">제목을 입력하세요.</string>
+    <string name="hint_diary_title">제목</string>
     <string name="hint_diary_contents">일기를 입력하세요.</string>
 </resources>
