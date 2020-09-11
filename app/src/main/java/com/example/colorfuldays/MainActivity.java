@@ -118,11 +118,11 @@ public class MainActivity extends AppCompatActivity
 
                 int size = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 40, getResources().getDisplayMetrics());
                 Button button = new Button(this);
-                GridLayout.LayoutParams layoutParams=new GridLayout.LayoutParams();
+                GridLayout.LayoutParams layoutParams = new GridLayout.LayoutParams();
 
-                layoutParams.setMargins(27,27,0,0);         //나중에 dp로 받게 변경
-                layoutParams.width=size;
-                layoutParams.height=size;
+                layoutParams.setMargins(27, 27, 0, 0);         //나중에 dp로 받게 변경
+                layoutParams.width = size;
+                layoutParams.height = size;
                 button.setLayoutParams(layoutParams);
                 button.setBackgroundResource(R.drawable.color_button_shape);
 
@@ -133,7 +133,8 @@ public class MainActivity extends AppCompatActivity
 
                 Toast.makeText(getApplicationContext(), "Received : " + name, Toast.LENGTH_LONG).show();
 
-                button.setOnClickListener(new View.OnClickListener() {
+                button.setOnClickListener(new View.OnClickListener()
+                {
                     @Override
                     public void onClick(View v)
                     {
