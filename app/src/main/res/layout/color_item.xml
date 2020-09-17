@@ -5,25 +5,25 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/item_button"
-            style="@style/color_selection"
-            android:gravity="center"
-            android:background="@drawable/item_button_shape"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </Button>
+    <ImageButton
+        android:id="@+id/item_button"
+        style="@style/color_selection"
+        android:gravity="center"
+        android:background="@drawable/item_button_shape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageButton>
 
-        <TextView
-            android:id="@+id/item_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:textColor="@color/design_default_color_on_primary"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_button">
-        </TextView>
+    <TextView
+        android:id="@+id/item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/design_default_color_on_primary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_button">
+    </TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
