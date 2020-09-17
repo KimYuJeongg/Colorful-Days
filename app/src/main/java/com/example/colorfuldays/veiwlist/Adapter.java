@@ -1,8 +1,6 @@
 package com.example.colorfuldays.veiwlist;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
@@ -10,11 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.os.Handler;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.colorfuldays.ColorSelectionActivity;
 import com.example.colorfuldays.R;
 
 import java.util.ArrayList;
@@ -25,14 +21,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
 {
     private ArrayList<String> itemList;
     private Context context;
-    private Activity colorSelectionActivity;
-    int divide_line = 0;
 
-    public Adapter(Context context, ArrayList<String> itemList, ColorSelectionActivity colorSelectionActivity)
+    public Adapter(Context context, ArrayList<String> itemList)
     {
         this.context = context;
         this.itemList = itemList;
-        this.colorSelectionActivity = colorSelectionActivity;
     }
 
     private Map<String, String> ColorMap()
@@ -71,42 +64,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
 
         if (ColorMap().containsKey(itemList.get(position)))
             bgShape.setColor(Color.parseColor(ColorMap().get(itemList.get(position))));
-
-        holder.button.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                divide_line++;
-                final Intent intent = new Intent();
-
-                if (position != RecyclerView.NO_POSITION)
-                {
-                    new Handler().postDelayed(new Runnable()
-                    {
-                        @Override
-                        public void run()
-                        {
-                            if(divide_line == 1)
-                            {
-                                String color = ColorMap().get(itemList.get((position)));
-                                intent.putExtra("name", color);
-                                colorSelectionActivity.setResult(Activity.RESULT_OK, intent);
-                                notifyItemChanged(position);
-                            }
-                            else if(divide_line == 2)
-                            {
-                                String color = ColorMap().get(itemList.get((position)));
-                                intent.putExtra("name", color);
-                                colorSelectionActivity.setResult(Activity.RESULT_OK, intent);
-                                notifyItemChanged(position);
-                                colorSelectionActivity.finish(); // Double Click Listener
-                            }
-                        }
-                    }, 500);
-                }
-            }
-        });
     }
 
     @Override
@@ -115,10 +72,22 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
         return itemList.size();
     }
 
+    public interface OnItemClickListener
+    {
+        void onItemClick(View v, int pos);
+    }
+
+    private OnItemClickListener mListener = null;
+
+    public void setOnItemClickListener(OnItemClickListener listener)
+    {
+        this.mListener = listener;
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder
     {
         public TextView textview;
-        public ImageButton button;
+        ImageButton button;
 
         public ViewHolder(View itemView)
         {
@@ -126,6 +95,20 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
 
             textview = itemView.findViewById(R.id.item_text);
             button = itemView.findViewById(R.id.item_button);
+
+            button.setOnClickListener(  new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View v)
+                {
+                    int pos = getBindingAdapterPosition();
+
+                    if (pos != RecyclerView.NO_POSITION)
+                    {
+                        mListener.onItemClick(v, pos);
+                    }
+                }
+            });
         }
     }
 }
