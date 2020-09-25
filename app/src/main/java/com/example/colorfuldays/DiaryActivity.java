@@ -3,9 +3,14 @@ package com.example.colorfuldays;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.Spanned;
+import android.text.style.StyleSpan;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -35,6 +40,16 @@ public class DiaryActivity extends AppCompatActivity
                 case R.id.more:
                     Toast.makeText(getApplicationContext(), "rr Pushed ", Toast.LENGTH_LONG).show();
                     break;
+                case R.id.quote:
+                case R.id.bold:
+                    EditText editText = (EditText) findViewById(R.id.edit_content);
+                    Spannable spannable = (Spannable) editText.getText();
+                    spannable.setSpan(new StyleSpan(Typeface.BOLD), editText.getSelectionStart(), editText.getSelectionEnd(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    break;
+                case R.id.align:
+                case R.id.size:
+                case R.id.hashtag:
+                    break;
             }
         }
     }
@@ -50,17 +65,14 @@ public class DiaryActivity extends AppCompatActivity
         TextView date = findViewById(R.id.date);
         date.setText(intent.getStringExtra("date"));
 
-//        ImageButton close = findViewById(R.id.close);
-//        TextView save = findViewById(R.id.save);
-//        save.setTextColor(Color.parseColor(color));
-
         BtnOnClickListener onClickListener = new BtnOnClickListener();
 
         ImageButton insert_image = (ImageButton) findViewById(R.id.insert_image);
         insert_image.setOnClickListener(onClickListener);
         ImageButton dividing_line = (ImageButton) findViewById(R.id.more);
         dividing_line.setOnClickListener(onClickListener);
-
+        ImageButton bold = (ImageButton) findViewById(R.id.bold);
+        bold.setOnClickListener(onClickListener);
     }
 
 
