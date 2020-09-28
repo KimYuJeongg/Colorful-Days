@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -112,8 +111,6 @@ public class MainActivity extends AppCompatActivity
         {
             if (resultCode == RESULT_OK)
             {
-                String name = intent.getStringExtra("name");
-
                 GridLayout gridLayout = (GridLayout) findViewById(R.id.gridLayout);
 
                 int size = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 40, getResources().getDisplayMetrics());
@@ -127,11 +124,9 @@ public class MainActivity extends AppCompatActivity
                 button.setBackgroundResource(R.drawable.color_button_shape);
 
                 GradientDrawable dynamicColor = (GradientDrawable) button.getBackground().getCurrent();
-                dynamicColor.setColor(Color.parseColor(name));
+                dynamicColor.setColor(Color.parseColor(intent.getStringExtra("name")));
 
                 gridLayout.addView(button);
-
-                Toast.makeText(getApplicationContext(), "Received : " + name, Toast.LENGTH_LONG).show();
 
                 button.setOnClickListener(new View.OnClickListener()
                 {
