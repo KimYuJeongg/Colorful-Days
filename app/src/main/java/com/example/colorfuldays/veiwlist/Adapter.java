@@ -21,6 +21,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
 {
     private ArrayList<String> itemList;
     private Context context;
+    private int last_click = -1;
 
     public Adapter(Context context, ArrayList<String> itemList)
     {
@@ -35,11 +36,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
         colorMap.put("Anger", "#ff6969");
         colorMap.put("Confusion", "#ffc085");
         colorMap.put("Exciting", "#fff785");
-        colorMap.put("Normal", "#b9faa0");
+        colorMap.put("Normal", "#bbe09d");
         colorMap.put("Joy", "#ffbcb8");
         colorMap.put("Sad", "#9eb1ff");
-        colorMap.put("Tired", "#9578ff");
-        colorMap.put("Melancholy", "#c587ff");
+        colorMap.put("Tired", "#7a7cff");
+        colorMap.put("Melancholy", "#b090f0");
 
         return colorMap;
     }
@@ -96,7 +97,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
             textview = itemView.findViewById(R.id.item_text);
             button = itemView.findViewById(R.id.item_button);
 
-            button.setOnClickListener(  new View.OnClickListener()
+            button.setOnClickListener(new View.OnClickListener()
             {
                 @Override
                 public void onClick(View v)
