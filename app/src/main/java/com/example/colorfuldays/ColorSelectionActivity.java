@@ -72,7 +72,6 @@ public class ColorSelectionActivity extends Activity
             public void onItemClick(final View v, final int pos)
             {
                 final Intent intent = new Intent();
-
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable()
                 {
@@ -104,11 +103,11 @@ public class ColorSelectionActivity extends Activity
         colorMap.put("Anger", "#ff6969");
         colorMap.put("Confusion", "#ffc085");
         colorMap.put("Exciting", "#fff785");
-        colorMap.put("Normal", "#b9faa0");
+        colorMap.put("Normal", "#bbe09d");
         colorMap.put("Joy", "#ffbcb8");
         colorMap.put("Sad", "#9eb1ff");
-        colorMap.put("Tired", "#9578ff");
-        colorMap.put("Melancholy", "#c587ff");
+        colorMap.put("Tired", "#7a7cff");
+        colorMap.put("Melancholy", "#b090f0");
 
         return colorMap;
     }
