@@ -1,5 +1,6 @@
 package com.example.colorfuldays;
 
+import android.Manifest;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -19,8 +20,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.File;
+import com.gun0912.tedpermission.PermissionListener;
+import com.gun0912.tedpermission.TedPermission;
+
 import java.io.InputStream;
+import java.util.ArrayList;
 
 public class DiaryActivity extends AppCompatActivity
 {
@@ -69,6 +73,8 @@ public class DiaryActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diary);
 
+        tedPermission();
+
         Intent intent = getIntent();
 
         TextView date = findViewById(R.id.date);
@@ -78,8 +84,10 @@ public class DiaryActivity extends AppCompatActivity
 
         ImageButton insert_image = (ImageButton) findViewById(R.id.insert_image);
         insert_image.setOnClickListener(onClickListener);
+
         ImageButton dividing_line = (ImageButton) findViewById(R.id.more);
         dividing_line.setOnClickListener(onClickListener);
+
         ImageButton bold = (ImageButton) findViewById(R.id.bold);
         bold.setOnClickListener(onClickListener);
     }
@@ -116,13 +124,28 @@ public class DiaryActivity extends AppCompatActivity
         }
     }
 
-    private BitmapFactory.Options getBitmapSize(File imageFile)
+    private void tedPermission()
     {
-        BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inJustDecodeBounds = true;
-        BitmapFactory.decodeFile(imageFile.getAbsolutePath(), options);
+        PermissionListener permissionListener = new PermissionListener()
+        {
+            @Override
+            public void onPermissionGranted()
+            {
+                // 권한 요청 성공
+            }
 
-        return options;
+            @Override
+            public void onPermissionDenied(ArrayList<String> deniedPermissions)
+            {
+                // 권한 요청 실패
+            }
+        };
+        TedPermission.with(this)
+                .setPermissionListener(permissionListener)
+                .setRationaleMessage(getResources().getString(R.string.request_gallery_access))
+                .setDeniedMessage(getResources().getString(R.string.denied_gallery_access))
+                .setPermissions(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA).check();
     }
+
 
 }

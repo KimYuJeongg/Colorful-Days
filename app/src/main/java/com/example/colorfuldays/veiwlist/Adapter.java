@@ -6,7 +6,8 @@ import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,7 +22,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
 {
     private ArrayList<String> itemList;
     private Context context;
-    private int last_click = -1;
+    private int checkedPosition = 0;
 
     public Adapter(Context context, ArrayList<String> itemList)
     {
@@ -61,6 +62,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
         holder.textview.setText(item);
         holder.textview.setTag(item);
 
+        holder.bind(itemList.get(position));
+
         GradientDrawable bgShape = (GradientDrawable) holder.button.getBackground();
 
         if (ColorMap().containsKey(itemList.get(position)))
@@ -87,8 +90,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
 
     public class ViewHolder extends RecyclerView.ViewHolder
     {
-        public TextView textview;
-        ImageButton button;
+        private TextView textview;
+        private Button button;
+        private ImageView imageView;
 
         public ViewHolder(View itemView)
         {
@@ -96,7 +100,26 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>
 
             textview = itemView.findViewById(R.id.item_text);
             button = itemView.findViewById(R.id.item_button);
+            imageView = itemView.findViewById(R.id.item_selected);
+        }
 
+        void bind(final String itemList)
+        {
+            if (checkedPosition == -1)
+            {
+                imageView.setVisibility(View.GONE);
+            }
+            else
+            {
+                if (checkedPosition == getBindingAdapterPosition())
+                {
+                    imageView.setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    imageView.setVisibility(View.GONE);
+                }
+            }
             button.setOnClickListener(new View.OnClickListener()
             {
                 @Override

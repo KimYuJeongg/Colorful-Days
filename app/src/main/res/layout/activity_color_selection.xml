@@ -32,7 +32,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout"
+            android:id="@+id/viewListLinearLayout"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_weight="3"

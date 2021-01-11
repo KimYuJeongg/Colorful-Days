@@ -5,14 +5,23 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent">
 
-    <ImageButton
+    <Button
         android:id="@+id/item_button"
         style="@style/color_selection"
         android:gravity="center"
         android:background="@drawable/item_button_shape"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-    </ImageButton>
+    </Button>
+
+    <ImageView
+        android:id="@+id/item_selected"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_heart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
 
     <TextView
         android:id="@+id/item_text"
